@@ -1,5 +1,4 @@
-def f(a, b, c):
-    return a + b + c
+from gui import App
 
-g = lambda x: f(x, 1, 4)
-print(g(3))
+if __name__ == "__main__":
+    App()
