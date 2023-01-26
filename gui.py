@@ -31,6 +31,6 @@ class App:
             if n <= 2: raise Exception("n must be greater than 2")
             
             x, y = solve(n)
-            show(x, y)
+            show(x, y, n)
         except:
             messagebox.showwarning(title="eroor", message="Incorrect input data")
