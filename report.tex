@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Równanie transportu ciepła MES}
+\author{Michał Kobiera}
+\date{January 2023}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Problem}
+\textbf{Równanie transport ciepła:}
+\[-k(x)\frac{d^2u(x)}{dx^2} = 100x\]
+
+\[u(2) = 0\]
+
+\[\frac{du(0)}{dx} + u(0) = 20\]
+
+\[k(x) = \left\{ \begin{array}{rcl}
+x + 1 & \mbox{dla}
+& x \in [0, 1] \\ 2x & \mbox{dla} & x \in (1, 2]
+\end{array}\right.\]
+
+gdzie \textit{u} to poszukiwana funkcja
+\[[0,2] \ni x \mapsto u(x) \in R\]
+
+\section{Rozwiązanie}
+
+\[-u''(x) = \frac{100x}{k(x)}\]
+\[-u''v = \frac{100x}{k(x)}v\ \hspace{8mm} v(2) = 0\]
+\[-\int_0^2 u''vdx = \int_0^2 \frac{100x}{k(x)}vdx\]
+\newline
+\[\int_0^2 u''vdx = -[u'v]_0^2 + \int_0^2 u'v'dx = \int_0^2 u'v'dx - v(2)u'(2) + v(0)u'(0) = \]
+\[= \int_0^2 u'v'dx + v(0)[20-u(0)] = \int_0^2 u'v'dx + 20v(0) - u(0)v(0)\]
+\newline
+\[B(u, v) = \int_0^2 u'v'dx - u(0)v(0)\]
+\[L(v) = \int_0^2 \frac{100x}{k(x)}vdx - 20v(0)\]
+
+\newline
+\[B(u, v) = L(v)\]
+
+\end{document}
